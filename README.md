@@ -1,1 +1,1 @@
-# SimpleCrypto
+# simpleCoin
