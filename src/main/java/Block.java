@@ -22,8 +22,8 @@ public class Block {
     public String calculateHash() {
         String calculatedhash = Sha256Util.applySha256(
                 previousHash +
-                        Long.toString(timeStamp) +
-                        Integer.toString(nonce) +
+                        timeStamp +
+                        nonce +
                         merkleRoot
         );
         return calculatedhash;

@@ -71,12 +71,12 @@ public class Transaction {
     }
 
     public void generateSignature(PrivateKey privateKey) {
-        String data = Sha256Util.getStringFromKey(sender) + Sha256Util.getStringFromKey(reciepient) + Float.toString(value)	;
+        String data = Sha256Util.getStringFromKey(sender) + Sha256Util.getStringFromKey(reciepient) + value;
         signature = Sha256Util.applyECDSASig(privateKey,data);
     }
 
     public boolean verifySignature() {
-        String data = Sha256Util.getStringFromKey(sender) + Sha256Util.getStringFromKey(reciepient) + Float.toString(value)	;
+        String data = Sha256Util.getStringFromKey(sender) + Sha256Util.getStringFromKey(reciepient) + value;
         return Sha256Util.verifyECDSASig(sender, data, signature);
     }
 
@@ -93,7 +93,7 @@ public class Transaction {
         return Sha256Util.applySha256(
                 Sha256Util.getStringFromKey(sender) +
                         Sha256Util.getStringFromKey(reciepient) +
-                        Float.toString(value) + sequence
+                        value + sequence
         );
     }
 }
