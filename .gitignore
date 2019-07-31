@@ -26,3 +26,5 @@ hs_err_pid*
 *.kotlin_module
 target/classes/META-INF/simplecoin.kotlin_module
 *.kotlin_module
+.idea/.name
+.idea/$PRODUCT_WORKSPACE_FILE$

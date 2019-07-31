@@ -5,5 +5,4 @@ public class TransactionInput {
     public TransactionInput(String transactionOutputId) {
         this.transactionOutputId = transactionOutputId;
     }
-
 }

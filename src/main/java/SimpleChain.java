@@ -10,7 +10,7 @@ public class SimpleChain {
     public static ArrayList<Block> blockchain = new ArrayList<Block>();
     public static HashMap<String,TransactionOutput> UTXOs = new HashMap<>();
 
-    public static int difficulty = 5;
+    public static int difficulty = 4;
     public static float minimumTransaction = 0.1f;
     public static Wallet walletA;
     public static Wallet walletB;
@@ -34,6 +34,7 @@ public class SimpleChain {
 
         System.out.println("Creating and Mining Genesis block... ");
         Block genesis = new Block("0");
+        System.out.println(genesis.nonce);
         genesis.addTransaction(genesisTransaction);
         addBlock(genesis);
 
