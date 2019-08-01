@@ -2,15 +2,12 @@ import java.security.Security;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-//import java.util.Base64;
-//import com.google.gson.GsonBuilder;
-
 public class SimpleChain {
 
     public static ArrayList<Block> blockchain = new ArrayList<Block>();
     public static HashMap<String,TransactionOutput> UTXOs = new HashMap<>();
 
-    public static int difficulty = 4;
+    public static int difficulty = 6;
     public static float minimumTransaction = 0.1f;
     public static Wallet walletA;
     public static Wallet walletB;
